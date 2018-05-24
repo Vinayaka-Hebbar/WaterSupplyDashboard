@@ -1,0 +1,46 @@
+.progress-button svg.progress-circle path {
+  stroke: #1ECD97;
+  stroke-width: 5;
+}
+
+.loading.progress-button svg.progress-circle path,
+.success.progress-button svg.checkmark path,
+.error.progress-button svg.cross path {
+  opacity: 1;
+  -webkit-transition: stroke-dashoffset 0.3s;
+  transition: stroke-dashoffset 0.3s;
+}
+
+.progress-button svg.checkmark path,
+.progress-button svg.cross path {
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-width: 4;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+
+.loading.progress-button span {
+  -webkit-transition: opacity 0.15s;
+  transition: opacity 0.15s;
+}
+
+.loading.progress-button span,
+.success.progress-button span,
+.error.progress-button span {
+  opacity: 0; /* keep it hidden in all states */
+}
+
+.progress-button svg path {
+  opacity: 0;
+  fill: none;
+}
+
+.progress-button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}

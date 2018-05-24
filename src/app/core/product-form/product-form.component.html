@@ -1,0 +1,49 @@
+<div class="modal-header">
+  <label>Add Product</label>
+  <button class="close" type="button" (click)="closeModal()">x</button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="formProduct" (ngSubmit)="onSubmit()" role="form">
+    <div class="form-group">
+      <label for="productName">Name</label>
+      <input type="text" class="form-control" formControlName="productName" id="productName" name="productName">
+    </div>
+    <div class="form-group">
+      <label for="productId">id</label>
+      <input type="number" class="form-control" formControlName="productId" id="productId" name="productId">
+    </div>
+    <div class="form-group">
+      <label for="productPrice">Price</label>
+      <input type="number" class="form-control" formControlName="productPrice" id="productPrice">
+    </div>
+    <div class="form-group">
+      <label for="productImage">Image</label>
+      <input type="file" (change)="detectFiles($event)" id="productImage">
+      <input type="hidden" formControlName="productImageUrl">
+      <button type="button" (click)="onUpload()" [disabled]="!selectedFiles">Upload</button>
+    </div>
+    <div *ngIf="upload">
+      <div class="progress">
+        <div class="progress-bar" [ngStyle]="{ 'width': upload?.progress + '%' }" aria-valuemax="100">{{upload?.progress}}%</div>
+      </div>
+      Progress: {{upload?.name}} | {{upload?.progress}}% Complete
+    </div>
+    <div class="form-group">
+      <label for="productType">Type</label>
+      <select formControlName="productType" name="productType" class="form-control" id="productType">
+        <option value="Can">Can</option>
+        <option value="2 Can">2 Can</option>
+        <option value="Piece">Piece</option>
+        <option value="Carton">Carton</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="productDesc">Desc</label>
+      <input type="text" formControlName="productDesc" name="productDesc" class="form-control" id="productDesc">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-default" [disabled]="!formProduct.valid">Save</button>
+      <button class="btn btn-default" (click)="closeModal()">Close</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,37 @@
+<div class="row">
+
+  <div class="col-sm-12" *ngIf="sliceOrdered.length > 0">
+    <div class="row">
+      <div class="col-12">
+        <div class="flex-column">
+          <div class="btn-group" dropdown>
+            <a dropdownToggle class="fa fa-sort">Sort</a>
+            <ul *dropdownMenu class="dropdown-menu" role="menu">
+              <li role="menuitem"><a class="dropdown-item" (click)="sortByPending()">Pending</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Quantity</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Price</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card-columns" >
+        <div class="card m-1" *ngFor="let item of sliceOrdered">
+          <img [src]="item.imageUrl" class="card-img-top" style="height: 14em">
+          <div class="card-body bg-light">
+            <h6 class="card-title">Price : <span class="text-primary">{{item.price}} Rs</span></h6>
+            <h6 class="card-title">Quantity : <span class="text-primary">{{item.quantity}}</span></h6>
+            <h6 class="card-title">Status : <span class="text-primary">{{item.status.value}}</span></h6>
+            <h6>Total: <span class="text-primary">{{item.price * item.quantity}} Rs</span></h6>
+            <h6><a class="btn btn-primary btn-sm text-white" (click)="showDetails(item)">Details</a><a
+              class="btn btn-primary btn-sm text-white ml-2" *ngIf="item.status.value === 'Pending'"
+              (click)="showConfirm(item)">Confirm</a></h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <pagination [totalItems]="ordered.length" (pageChanged)="pageChanged($event)"></pagination>
+      </div>
+    </div>
+  </div>
+</div>

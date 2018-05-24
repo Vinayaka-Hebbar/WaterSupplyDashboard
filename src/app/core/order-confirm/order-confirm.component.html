@@ -1,0 +1,17 @@
+<div class="modal-header">
+  <label>Please Select Delivery Boy</label>
+  <button class="close" (click)="closeForm()">x</button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="confirmGroup" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="assignBoy">Assign to Delivery Boy</label>
+      <select id="assignBoy" name="assign" formControlName="assign" class="form-control">
+        <option *ngFor="let dboy of dboys" [value]="dboy.uid">{{dboy.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-default" [disabled]="!confirmGroup.valid" type="submit">Confirm</button>
+    </div>
+  </form>
+</div>

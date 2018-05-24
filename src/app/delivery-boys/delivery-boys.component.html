@@ -1,0 +1,15 @@
+<button class="btn btn-default" (click)="addDetails($event)">Add</button>
+<div class="list-group mt-3">
+  <a class="list-group-item flex-column align-items-start" *ngFor="let user of dboys">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{user.name}}</h5>
+      <div>
+        <button (click)="onEdit(user)">Edit</button>
+        <button (click)="onRemove(user)">Remove</button>
+      </div>
+    </div>
+      <p class="text-muted">{{user.address}}</p>
+      <p class="text-muted">{{user.phone}}</p>
+      <small class="text-muted">{{user.assign}}</small>
+  </a>
+</div>

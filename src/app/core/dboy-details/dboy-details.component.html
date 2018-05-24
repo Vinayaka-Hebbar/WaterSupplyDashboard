@@ -1,0 +1,38 @@
+<div class="modal-header">
+  <label>Details</label>
+  <button type="button" class="close" (click)="closeModal()">&times;</button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="userForm" (ngSubmit)="onSave()">
+    <div class="form-group">
+      <label for="dboyName">Name</label>
+      <input type="text" class="form-control" name="name" formControlName="name" id="dboyName" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label for="dboyEmail">Email</label>
+      <input type="email" class="form-control" name="email" formControlName="email" id="dboyEmail" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="dboyAge">Age</label>
+      <input type="number" class="form-control" name="age" formControlName="age" id="dboyAge" placeholder="Age">
+    </div>
+    <div class="form-group">
+      <label for="dboyAddress">Address</label>
+      <input type="text" class="form-control" name="address" formControlName="address" id="dboyAddress" placeholder="Address">
+    </div>
+    <div class="form-group">
+      <label for="dboyPhone">Phone</label>
+      <input type="number" class="form-control" name="phone" formControlName="phone" id="dboyPhone" placeholder="Phone">
+    </div>
+    <div class="form-group">
+      <label for="dboyAssign">Assign Location</label>
+      <select class="form-control" name="location" formControlName="location" id="dboyAssign" >
+        <option *ngFor="let location of locations" [value]="location.label">{{location.label}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button type="submit" [disabled]="!userForm.valid" class="btn btn-default">Save</button>
+      <button type="button" class="btn btn-default" (click)="closeModal()">Close</button>
+    </div>
+  </form>
+</div>

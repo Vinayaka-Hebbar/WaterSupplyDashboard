@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-sm-5">
+    <div class="card bg-color-blue" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Orders</h5>
+        <a routerLink="/dashboard/orders" class="btn btn-primary">
+          <i class="fa fa-list-ul"></i> Go</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <h3>Delivery</h3>
+    <div class="list-group">
+      <a class="list-group-item" *ngFor="let delivery of delivers">
+        <p>Order ID: {{delivery.orderId}}</p>
+        <small>Address: {{delivery.address}}</small>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="row">
+  <div class=" col-sm-8 col-md-3">
+    <div>
+      <div class="list-group mt-2 scrollable">
+        <div *ngFor="let marker of (markers | concat:newMarkers:false:counter)">
+          <a class="list-group-item list-group-item-action" (click)="onLocationClick(marker)">
+            {{marker.full}}
+            {{marker.pinCode}}
+          </a>
+          <div class="button-group" *ngIf="marker.hasSaved">
+            <button (click)="saveLocation(marker)" >Save</button>
+            <button (click)="removeNewMarker(marker)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-10 col-md-9 ">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" (mapClick)="mapClicked($event)">
+      <agm-marker
+        *ngFor="let m of (markers | concat:newMarkers:false:counter)"
+        [latitude]="m.lat"
+        [longitude]="m.lng">
+
+        <agm-info-window>
+          <strong>{{m.full}}<br/>{{m.pinCode}}</strong>
+          <a (click)="removeMarker(m)" *ngIf="!m.hasSaved">Remove</a>
+        </agm-info-window>
+
+      </agm-marker>
+      <agm-circle [latitude]="lat" [longitude]="lng"
+                  [radius]="1000"
+                  [fillColor]="'blue'" *ngIf="circleVisible">
+
+      </agm-circle>
+    </agm-map>
+  </div>
+</div>

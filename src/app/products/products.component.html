@@ -1,0 +1,16 @@
+<button class="btn btn-sm-primary" (click)="onAddClick()">Add</button>
+<div class="card-columns mt-2">
+  <div class="card" *ngFor="let product of products">
+    <img class="card-img-top" [src]="product.imageUrl" style="height: 15em" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.desc}}</p>
+    </div>
+    <div class="card-footer">
+      <p>
+        <a class="btn btn-sm-primary" (click)="editProduct(product)">Edit</a>
+        <a class="btn btn-sm-primary" (click)="removeProduct(product)">Remove</a>
+      </p>
+    </div>
+  </div>
+</div>
