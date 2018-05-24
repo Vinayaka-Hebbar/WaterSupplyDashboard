@@ -1,1 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.primary-color {
+  color: cornflowerblue;
+}
+
+.bg-color-blue {
+  background-color: #23a2ed;
+}
+
+.z-index-3 {
+  z-index: 3;
+}
+
+.pt-6{
+  padding-top: 65px;
+}
+
+.bg-color-skyBlue {
+  background-color: #0fb2ff;
+}
+
+.bg-color-lightGreen {
+  background-color: #35cd6a;
+}
+
+nav.fix-100 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  padding-top: 62px;
+}
+
+.nav-collapse {
+  flex-basis: 100%;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.infinite-scroll {
+  height: 350px;
+  width: 350px;
+  border: 1px solid #f5ad7c;
+  overflow: scroll;
+  padding: 0;
+  list-style: none;
+}
+.infinite-scroll > li {
+  padding : 10px 5px;
+  line-height: 1.5;
+}
+
+agm-map {
+  height: 420px;
+}
+
+.scrollable {
+  height: 420px;
+  overflow-y: scroll
+}
+
+.dropdown-menu-sw {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  nav.fix-100 {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    padding-top: 0;
+    z-index: 2;
+  }
+
+}
+
+@media (min-width: 425px) {
+  .card-columns {
+    column-count: 1;
+  }
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 4;
+  }
+}

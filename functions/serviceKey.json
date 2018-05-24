@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "watersupply-48c7d",
+  "private_key_id": "e93f14e3be51520d7b311437abaa6bf99b982a97",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC/pPHiyul5EGKN\nlFBjaZ/Wgsin4vd0vPufZGfR7lZHLl9715z8cx+O4SnhVS6vmsD6FbFmxopxPHFF\neGggUVlCDtOdLjn9GeCqiykGeVHwf4e1LM9C10A5nfMNlmqsoBSYfON8/vUdjaw4\nt3RKIWWloWVPIluPPiheEHKSfRvDkKNd/a3JKLA4qxzmhKE9x5dw5PBQhNKq1PUB\nDwIedcYIDHdtGwyx3NMMMBfEqEeQwWIbe5Jau+UOdBFeFbYlLYdMgMkN6vMkSvGr\n9pWyABMN3aMA+Sw4X7yCbx8hxl3O5m6eeIiPwMYhHbHCKaHBytWH6uCxOiQdF6vN\nLW7JJA8lAgMBAAECggEAAugLkr2HkBe3cD9ofwgjeFjIQMLl2a4iYHQ2HokEuMnO\nAROPygStR5jdblFWUYD2vhmKn3em3VlF5tW7jzPp9zZrhKsmY32F5VLndsrrux/q\nrQzRLDRrVlmxeDUIs0tZN0fQ7mdydwsxP7SejZ+XNPgZ5dBBqbjkWqrZW083ltNp\nu/WP05Jvw6NLs6cYEgm0ZXMgrTQeJQUJD+l0gq4cGh9tFbVneuYy6vgqPdmkzWkH\nlDhFSn1Ue5/bWBRmxxZcPGhcX82bJs+0wRImnMvDRbwW3niSJf9kmIshSzV2wt7t\nZywJm9TYphvyB10sguaz8GPSlsrRoZyGOAa/5W17+QKBgQDyXvquGTCDhSltMgWD\n8ybtklvxSzHat1JL4Her0GGaxkySu0IpsW8j5yX3Jycj+mg+ZoRtZq9MtQ/43fHK\nNxSWSLRn+D1dYLF04L1BOVwxI8tBuXePuVLBBr4oWx229J4oaSZlJ6OaT3ZvAQ10\nlF67XBoTmnVLIGdWNMSgzqs0XQKBgQDKa7xqkIr8qtHaN4WaeltaIk/eod7S04EY\nG/jTIC3wV8knvBacep6KSm4HzI+3da40Jf15Mk5pGO7pMGGwQ2cCHfAbwcfeVVVN\nHZV93gvbhMw7DttoMUw73qrjf/9lJrsqFiCtdA85hj9yfwjvGx9ub5364oGvbe9q\n5V2ZUyCZaQKBgQCQG+cjUzjkSm3qTj63SQERat+eJd6btDqLgQjGsN0IAPYQnKTn\nU2fIyixpuu7r1nza9Wux/McobdP0XkrguEVWYh5aX2BlQBPjcak1udxWH3lAN/2e\nCEvrF45DQoH1gZb0YikBJkOBgdPihpawhXOaJVYf58vsAnVO7YsoLhnfxQKBgQCt\nYAvY5ob1FUZ69tVLVAPMttjcIp8cyqWmxcag5s4SLs6PZw2i52/FmSyXJ4HtLDGS\nXvu1A/6fDAkN2C/D7mdbK9NNovOTHlnanD0/uqFDW4ImD3qjyp22JekOxMI2nC7x\nRFSm3GJx7eeIJQC88+k/CQEyMzHK1YmccGpz+fxRCQKBgQCmkbROgBdV2Y89aULl\nUgHsi8AJsckwxFgtyws4540+5Ul7zQmcNCuEux5OFHt7Jq/eeygVH3cMXbS3cTch\n9LHMKqwtlsS/P++A8CPF996lc2cR8OYX/g/k6uHHI/LlVvpcx/G48rNEfGcHNgNc\nW2db8k0yaVv8LnasRexLLjhsfA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "admin-947@watersupply-48c7d.iam.gserviceaccount.com",
+  "client_id": "102982679663388361395",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/admin-947%40watersupply-48c7d.iam.gserviceaccount.com"
+}
